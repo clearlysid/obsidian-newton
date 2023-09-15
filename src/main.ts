@@ -1,5 +1,7 @@
 import { Notice, Plugin } from 'obsidian';
 import { DEFAULT_SETTINGS, SampleSettingTab, NewtonSettings } from './settings';
+import { getVoiceMemos, recordNewVoiceMemo } from './voicememos';
+
 
 export default class Newton extends Plugin {
 	settings: NewtonSettings;
@@ -9,7 +11,8 @@ export default class Newton extends Plugin {
 
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('apple', 'Newton', (evt: MouseEvent) => {
-			new Notice('This is a notice!');
+			// getVoiceMemos();
+			recordNewVoiceMemo();
 		});
 
 		// This adds a simple command that can be triggered anywhere
@@ -18,6 +21,7 @@ export default class Newton extends Plugin {
 			name: 'Open sample modal (simple)',
 			callback: () => {
 				console.log("open sample modal")
+				process.version
 			}
 		});
 

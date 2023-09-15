@@ -4,10 +4,14 @@ import Newton from './main';
 
 export interface NewtonSettings {
 	mySetting: string;
+	vm: boolean;
+	transcribeVm: string;
 }
 
 export const DEFAULT_SETTINGS: NewtonSettings = {
-	mySetting: 'default'
+	mySetting: 'default',
+	vm: false,
+	transcribeVm: "",
 }
 
 export class SampleSettingTab extends PluginSettingTab {
@@ -24,13 +28,12 @@ export class SampleSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Setting #1')
-			.setDesc('It\'s a secret')
-			.addText(text => text
-				.setPlaceholder('Enter your secret')
-				.setValue(this.plugin.settings.mySetting)
+			.setName('Voice Memos')
+			.setDesc("Sync to Apple's Voice Memos app")
+			.addToggle(toggle => toggle
+				.setValue(this.plugin.settings.vm)
 				.onChange(async (value) => {
-					this.plugin.settings.mySetting = value;
+					this.plugin.settings.vm = value;
 					await this.plugin.saveSettings();
 				}));
 	}
