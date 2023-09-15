@@ -3,7 +3,7 @@
 	"name": "Newton",
 	"version": "0.1.0",
 	"minAppVersion": "1.4.0",
-	"description": "Integrate closer with Apple's macOS apps",
+	"description": "Bring Apple Reminders, Calendar and Voice Memos to Obsidian.",
 	"author": "@clearlysid",
 	"authorUrl": "https://twitter.com/clearlysid",
 	"fundingUrl": "https://github.com/sponsors/clearlysid",
