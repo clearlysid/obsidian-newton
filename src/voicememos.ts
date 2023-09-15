@@ -36,5 +36,5 @@ export const recordNewVoiceMemo = () => {
 		end tell
 	`
 
-	exec(`osascript -e '${script}'`, (err, stdout, stderr) => {});
+	exec(`osascript -e '${script}'`);
 }

@@ -8,11 +8,13 @@ export default class Newton extends Plugin {
 
 	async onload() {
 		await this.loadSettings();
-
+		
+		
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('apple', 'Newton', (evt: MouseEvent) => {
 			// getVoiceMemos();
-			recordNewVoiceMemo();
+			
+			// recordNewVoiceMemo();
 		});
 
 		// This adds a simple command that can be triggered anywhere
