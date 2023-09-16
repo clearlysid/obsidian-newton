@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"electron": "*",
+		"execa": "^8.0.1",
 		"music-metadata": "^8.1.4"
 	}
 }

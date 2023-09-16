@@ -27,11 +27,14 @@ export class SampleSettingTab extends PluginSettingTab {
 
 		containerEl.empty();
 
-		new Setting(containerEl).setName("Voice Memos").setHeading();
+		new Setting(containerEl)
+			.setName("Voice Memos")
+			.setDesc("Sync your voice memos from iCloud and transcribe them into Obsidian notes.")
+			.setHeading();
 
 		new Setting(containerEl)
 			.setName('Sync from iCloud')
-			.setDesc("Ensure that your voice memos are synced from iCloud.")
+			.setDesc("Ensure iCloud-sync for Voice Memos is enabled.")
 			.addToggle(toggle => toggle
 				.setValue(this.plugin.settings.vm)
 				.onChange(async (value) => {

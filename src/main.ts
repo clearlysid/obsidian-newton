@@ -1,7 +1,7 @@
 import { Notice, Plugin } from 'obsidian';
 import { DEFAULT_SETTINGS, SampleSettingTab, NewtonSettings } from './settings';
 import { getVoiceMemos, recordNewVoiceMemo } from './voicememos';
-
+import * as reminders from "./reminders";
 
 export default class Newton extends Plugin {
 	settings: NewtonSettings;
@@ -13,7 +13,11 @@ export default class Newton extends Plugin {
 		// This creates an icon in the left ribbon.
 		const ribbonIconEl = this.addRibbonIcon('apple', 'Newton', (evt: MouseEvent) => {
 			// getVoiceMemos();
-			
+
+			reminders.getLists().then((lists) => {
+				console.log(lists)
+			});
+
 			// recordNewVoiceMemo();
 		});
 
