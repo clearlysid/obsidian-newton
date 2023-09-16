@@ -221,6 +221,11 @@
   dependencies:
     "@types/node" "*"
 
+"@uvarov.frontend/vanilla-calendar@^2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@uvarov.frontend/vanilla-calendar/-/vanilla-calendar-2.6.2.tgz#5d9008524489b8d64875059527b78e74a4d0f7ad"
+  integrity sha512-s13P3duvuICXNiyo3RC1t7ZhzPAaIKAVgt6d+QAgrCs3CPPuPk7W5LeUC1oGKNkZgMBrsZrvtF9T3Ka5fjkDbg==
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"

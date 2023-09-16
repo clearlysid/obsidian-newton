@@ -29,9 +29,9 @@ export const JXA_SCRIPTS = {
 };
 
 export async function execJXA<T, R = {}>(scriptPath: string, data?: R): Promise<T> {
-  const prefix = process.env.NODE_ENV === 'test' ? 'test' : '';
-
-  const { stderr } = await execa(prefix + 'osascript', [
+  const { stderr } = await execa('osascript', [
+    '-s',
+    's',
     '-l',
     'JavaScript',
     '-e',
